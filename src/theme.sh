@@ -7,7 +7,7 @@ CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # shellcheck source=src/utils.sh
 . "$CURRENT_DIR/utils.sh"
 
-theme_variation=$(get_tmux_option "@theme_variation" "night")
+theme_variation=$(get_tmux_option "@theme_variation" "storm")
 theme_enable_icons=$(get_tmux_option "@theme_enable_icons" 1)
 theme_disable_plugins=$(get_tmux_option "@theme_disable_plugins" 0)
 
@@ -17,13 +17,13 @@ theme_disable_plugins=$(get_tmux_option "@theme_disable_plugins" 0)
 ### Load Options
 border_style_active_pane=$(get_tmux_option "@theme_active_pane_border_style" "${PALLETE['dark5']}")
 border_style_inactive_pane=$(get_tmux_option "@theme_inactive_pane_border_style" "${PALLETE[bg_highlight]}")
-left_separator=$(get_tmux_option "@theme_left_separator" "")
-right_separator=$(get_tmux_option "@theme_right_separator" "")
+left_separator=$(get_tmux_option "@theme_left_separator" "")
+right_separator=$(get_tmux_option "@theme_right_separator" "")
 transparent=$(get_tmux_option "@theme_transparent_status_bar" "false")
 
 if [ "$transparent" = "true" ]; then
-	left_separator_inverse=$(get_tmux_option "@theme_transparent_left_separator_inverse" "")
-	right_separator_inverse=$(get_tmux_option "@theme_transparent_right_separator_inverse" "")
+	left_separator_inverse=$(get_tmux_option "@theme_transparent_left_separator_inverse" "")
+	right_separator_inverse=$(get_tmux_option "@theme_transparent_right_separator_inverse" "")
 fi
 
 window_with_activity_style=$(get_tmux_option "@theme_window_with_activity_style" "italics")
