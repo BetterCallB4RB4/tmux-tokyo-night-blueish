@@ -49,7 +49,9 @@ tmux set-option -g status-style "bg=${status_bar_bg},fg=${PALLETE[white]}"
 
 # border color
 tmux set-option -g pane-active-border-style "fg=$border_style_active_pane"
-tmux set-option -g pane-border-style "#{?pane_synchronized,fg=$border_style_active_pane,fg=$border_style_inactive_pane}"
+tmux set-option -g pane-border-style fg=#b4f9f8
+tmux set-option -g pane-active-border-style fg=#b4f9f8
+tmux set-option -g pane-border-lines heavy
 
 ### Left side
 tmux set-option -g status-left "$(generate_left_side_string)"
