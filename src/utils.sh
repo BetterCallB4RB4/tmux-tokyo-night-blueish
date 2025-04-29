@@ -24,6 +24,7 @@ function generate_inactive_window_string() {
 
 	inactive_window_icon=$(get_tmux_option "@theme_plugin_inactive_window_icon" " ")
 	zoomed_window_icon=$(get_tmux_option "@theme_plugin_zoomed_window_icon" " ")
+	zoomed_color=$(get_tmux_option "@theme_plugin_zoomed_window_color" "red")
 
 	local separator_start="#[bg=${PALLETE['dark5']},fg=${PALLETE['bg_highlight']}]${left_separator:?}#[none]"
 	local separator_internal="#[bg=${PALLETE['dark3']},fg=${PALLETE['dark5']}]${left_separator:?}#[none]"
